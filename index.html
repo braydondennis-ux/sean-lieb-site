@@ -684,7 +684,7 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
   /* ---- Push every lead into GoHighLevel (and keep Netlify capture) ---- */
-  const GHL_HOOK="https://services.leadconnectorhq.com/hooks/l0ZXFHV5dLSdYmXCgISd/webhook-trigger/ae9c785d-fe19-482f-9ca3-de68b41aef47";
+  const GHL_HOOK="https://services.leadconnectorhq.com/hooks/l0ZXFHV5dLSdYmXCgISd/webhook-trigger/ba12a040-69a3-4b25-a0ca-eb089f893fe6";
   const enc=(fd)=>new URLSearchParams(fd).toString();
   async function sendLead(form,buildPayload){
     const fd=new FormData(form);
