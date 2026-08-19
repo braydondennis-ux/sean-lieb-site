@@ -450,6 +450,16 @@
       <a href="blog/index.html" class="more">All articles</a>
     </div>
     <div class="ins-grid reveal">
+      <a class="post" href="blog/grocery-anchored-centers.html">
+        <div class="ph"><img src="assets/prop-cavecreek.png" alt="Grocery-anchored retail center"></div>
+        <div class="pb">
+          <span class="cat">Investment</span>
+          <h3>Why Grocery-Anchored Centers Anchor Phoenix Retail</h3>
+          <p class="ex">Cycle after cycle, grocery-anchored centers are the most durable income in retail — and Greater Phoenix keeps proving it.</p>
+          <div class="meta">Aug 11, 2026 · 5 min read</div>
+          <span class="more">Read more</span>
+        </div>
+      </a>
       <a class="post" href="blog/phoenix-retail-2026.html">
         <div class="ph"><img src="assets/prop-cavecreek.png" alt="Phoenix retail market"></div>
         <div class="pb">
@@ -467,16 +477,6 @@
           <h3>Landlord vs. Tenant Rep: What Moves the Needle</h3>
           <p class="ex">Both sides win on preparation. Here's how representation actually changes outcomes on a retail lease.</p>
           <div class="meta">Jul 21, 2026 · 6 min read</div>
-          <span class="more">Read more</span>
-        </div>
-      </a>
-      <a class="post" href="blog/net-lease-buyers-guide.html">
-        <div class="ph"><img src="assets/prop-goodyear.png" alt="Net lease investment"></div>
-        <div class="pb">
-          <span class="cat">Investment</span>
-          <h3>A Buyer's Guide to Net-Lease Deals in Arizona</h3>
-          <p class="ex">Single-tenant net-lease can be the most passive real estate you'll own — if you underwrite the right things.</p>
-          <div class="meta">Jun 30, 2026 · 7 min read</div>
           <span class="more">Read more</span>
         </div>
       </a>
@@ -682,6 +682,29 @@
   document.getElementById('burger').addEventListener('click',()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}));
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ---- Push every lead into GoHighLevel (and keep Netlify capture) ---- */
+  const GHL_HOOK="https://services.leadconnectorhq.com/hooks/l0ZXFHV5dLSdYmXCgISd/webhook-trigger/ae9c785d-fe19-482f-9ca3-de68b41aef47";
+  const enc=(fd)=>new URLSearchParams(fd).toString();
+  async function sendLead(form,buildPayload){
+    const fd=new FormData(form);
+    const hp=form.getAttribute("netlify-honeypot");
+    if(hp&&fd.get(hp)) return; // honeypot filled → bot, silently drop
+    const toNetlify=fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:enc(fd)}).catch(()=>{});
+    const toGHL=fetch(GHL_HOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(buildPayload(fd))}).catch(()=>{});
+    const btn=form.querySelector("button[type=submit]"); if(btn){btn.disabled=true;btn.textContent="Sending…";}
+    await Promise.allSettled([toNetlify,toGHL]);
+    window.location.href="/thanks.html";
+  }
+  const _cf=document.querySelector('form[name="contact"]');
+  if(_cf) _cf.addEventListener("submit",(e)=>{e.preventDefault();sendLead(_cf,(fd)=>{
+    const n=(fd.get("name")||"").trim(), p=n.split(/\s+/);
+    return {full_name:n,first_name:p[0]||n,last_name:p.slice(1).join(" "),
+      email:fd.get("email")||"",phone:fd.get("phone")||"",interest:fd.get("interest")||"",
+      message:fd.get("message")||"",source:"seanlieb.com contact form"};});});
+  const _nl=document.querySelector('form[name="newsletter"]');
+  if(_nl) _nl.addEventListener("submit",(e)=>{e.preventDefault();sendLead(_nl,(fd)=>(
+    {email:fd.get("email")||"",interest:"Newsletter subscriber",source:"seanlieb.com newsletter"}));});
 </script>
 </body>
 </html>
