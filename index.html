@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sean Lieb — LevRose Commercial Real Estate</title>
-<meta name="description" content="Sean Lieb, Partner at LevRose Commercial Real Estate. Retail leasing, tenant representation and investment sales across Greater Phoenix, Tucson and Arizona.">
+<title>Sean Lieb | Retail Commercial Real Estate Broker — Scottsdale &amp; Phoenix, AZ</title>
+<meta name="description" content="Sean Lieb is a Partner at LevRose Commercial Real Estate in Scottsdale, AZ — specializing in retail leasing, landlord &amp; tenant representation, and commercial investment sales across Greater Phoenix, Tucson and Arizona. Rated 5.0 on Google.">
 <link rel="canonical" href="https://www.seanlieb.com/">
 <meta name="author" content="Sean Lieb">
 <meta name="robots" content="index,follow">
@@ -34,7 +34,10 @@
   "email": "slieb@levrose.com",
   "worksFor": { "@type": "Organization", "name": "LevRose Commercial Real Estate", "url": "https://www.levrose.com" },
   "address": { "@type": "PostalAddress", "streetAddress": "4414 N Civic Center Plaza, Ste 201", "addressLocality": "Scottsdale", "addressRegion": "AZ", "postalCode": "85251", "addressCountry": "US" },
-  "areaServed": ["Greater Phoenix", "Tucson", "Arizona"],
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.5006575, "longitude": -111.9215814 },
+  "hasMap": "https://maps.app.goo.gl/CRAJm4URo3ACsK2u9",
+  "priceRange": "$$$",
+  "areaServed": ["Greater Phoenix", "Tucson", "Scottsdale", "Arizona"],
   "knowsAbout": ["Retail leasing", "Tenant representation", "Landlord representation", "Commercial investment sales", "Net-lease properties", "Shopping center sales"],
   "sameAs": [
     "https://www.linkedin.com/in/sean-lieb/",
@@ -305,6 +308,12 @@
   .nlform input[type=email]::placeholder{color:var(--muted)}
   .nlform input[type=email]:focus{border-color:var(--orange)}
   .nlform button{border:none;cursor:pointer}
+  /* FAQ */
+  .faq-list{margin-top:44px;border-top:1px solid var(--line)}
+  .faq-item{padding:26px 4px;border-bottom:1px solid var(--line)}
+  .faq-item h3{font-family:var(--disp);font-weight:700;text-transform:none;letter-spacing:0;font-size:20px;color:var(--ink);margin-bottom:9px}
+  .faq-item p{font-family:var(--cond);color:var(--body);font-size:16.5px;max-width:840px}
+  .faq-item p a{color:var(--orange)}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
@@ -385,10 +394,10 @@
       <div class="about-photo reveal">
         <div class="disc"></div>
         <div class="badge"><div class="s">★★★★★</div><div class="v">5.0</div><div class="g">Google</div></div>
-        <img src="assets/sean.png" alt="Sean Lieb, Partner at LevRose Commercial Real Estate">
+        <img loading="lazy" src="assets/sean.png" alt="Sean Lieb, Partner at LevRose Commercial Real Estate">
       </div>
       <div class="about-copy reveal">
-        <div class="brokerage"><span class="lbl">Partner at</span><img src="assets/levrose-logo.png" alt="LevRose Commercial Real Estate"></div>
+        <div class="brokerage"><span class="lbl">Partner at</span><img loading="lazy" src="assets/levrose-logo.png" alt="LevRose Commercial Real Estate"></div>
         <span class="eyebrow">About Sean</span>
         <h2>Arizona retail, engineered for value.</h2>
         <p>Sean joined <b>LevRose in 2022</b> after building his career at SRS and Cushman &amp; Wakefield / DTZ. Today he represents landlords and tenants and closes investment sales throughout the Valley and Arizona's tertiary markets.</p>
@@ -413,7 +422,7 @@
       <a href="https://www.crexi.com/profile/sean-lieb-seanli" target="_blank" rel="noopener" class="more">All listings on Crexi</a>
     </div>
     <div class="feature reveal">
-      <div class="img"><img src="assets/prop-goodyear.png" alt="Retail center on Litchfield Rd, Goodyear AZ"></div>
+      <div class="img"><img loading="lazy" src="assets/prop-goodyear.png" alt="Retail center on Litchfield Rd, Goodyear AZ"></div>
       <div class="info">
         <span class="tag">Goodyear, AZ · Retail</span>
         <h3>Litchfield Rd Retail</h3>
@@ -422,12 +431,12 @@
       </div>
     </div>
     <div class="gal reveal">
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-cavecreek.png" alt="Cave Creek Rd retail, Phoenix AZ"><div class="cap"><div class="c">Phoenix, AZ</div><div class="s">Cave Creek Rd · Anchored center</div></div></div>
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-peoria.png" alt="Anchored retail on 91st Ave, Peoria AZ"><div class="cap"><div class="c">Peoria, AZ</div><div class="s">91st Ave · Anchored retail</div></div></div>
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-chandler.png" alt="Retail strip on Chandler Blvd, Phoenix AZ"><div class="cap"><div class="c">Phoenix, AZ</div><div class="s">Chandler Blvd · Multi-tenant</div></div></div>
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-glendale.png" alt="Cactus Rd retail, Glendale AZ"><div class="cap"><div class="c">Glendale, AZ</div><div class="s">Cactus Rd · Multi-tenant</div></div></div>
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-mesa.png" alt="Baseline Rd retail, Mesa AZ"><div class="cap"><div class="c">Mesa, AZ</div><div class="s">Baseline Rd · Strip center</div></div></div>
-      <div class="tile"><span class="pin">Retail</span><img src="assets/prop-goodyear.png" alt="Litchfield Rd retail, Goodyear AZ"><div class="cap"><div class="c">Goodyear, AZ</div><div class="s">Litchfield Rd · Big-box &amp; pads</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-cavecreek.png" alt="Cave Creek Rd retail, Phoenix AZ"><div class="cap"><div class="c">Phoenix, AZ</div><div class="s">Cave Creek Rd · Anchored center</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-peoria.png" alt="Anchored retail on 91st Ave, Peoria AZ"><div class="cap"><div class="c">Peoria, AZ</div><div class="s">91st Ave · Anchored retail</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-chandler.png" alt="Retail strip on Chandler Blvd, Phoenix AZ"><div class="cap"><div class="c">Phoenix, AZ</div><div class="s">Chandler Blvd · Multi-tenant</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-glendale.png" alt="Cactus Rd retail, Glendale AZ"><div class="cap"><div class="c">Glendale, AZ</div><div class="s">Cactus Rd · Multi-tenant</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-mesa.png" alt="Baseline Rd retail, Mesa AZ"><div class="cap"><div class="c">Mesa, AZ</div><div class="s">Baseline Rd · Strip center</div></div></div>
+      <div class="tile"><span class="pin">Retail</span><img loading="lazy" src="assets/prop-goodyear.png" alt="Litchfield Rd retail, Goodyear AZ"><div class="cap"><div class="c">Goodyear, AZ</div><div class="s">Litchfield Rd · Big-box &amp; pads</div></div></div>
     </div>
     <div class="lst-foot reveal"><a href="https://www.crexi.com/profile/sean-lieb-seanli" target="_blank" rel="noopener" class="btn btn-ghost">View all properties</a></div>
   </div>
@@ -490,7 +499,7 @@
     </div>
     <div class="ins-grid reveal">
       <a class="post" href="blog/grocery-anchored-centers.html">
-        <div class="ph"><img src="assets/prop-cavecreek.png" alt="Grocery-anchored retail center"></div>
+        <div class="ph"><img loading="lazy" src="assets/prop-cavecreek.png" alt="Grocery-anchored retail center"></div>
         <div class="pb">
           <span class="cat">Investment</span>
           <h3>Why Grocery-Anchored Centers Anchor Phoenix Retail</h3>
@@ -500,7 +509,7 @@
         </div>
       </a>
       <a class="post" href="blog/phoenix-retail-2026.html">
-        <div class="ph"><img src="assets/prop-cavecreek.png" alt="Phoenix retail market"></div>
+        <div class="ph"><img loading="lazy" src="assets/prop-cavecreek.png" alt="Phoenix retail market"></div>
         <div class="pb">
           <span class="cat">Market Report</span>
           <h3>Why Phoenix Retail Is Outperforming in 2026</h3>
@@ -510,7 +519,7 @@
         </div>
       </a>
       <a class="post" href="blog/landlord-vs-tenant-rep.html">
-        <div class="ph"><img src="assets/prop-peoria.png" alt="Retail leasing"></div>
+        <div class="ph"><img loading="lazy" src="assets/prop-peoria.png" alt="Retail leasing"></div>
         <div class="pb">
           <span class="cat">Leasing</span>
           <h3>Landlord vs. Tenant Rep: What Moves the Needle</h3>
@@ -635,6 +644,48 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">FAQ</span><h2 class="sec-head" style="margin-top:16px">Common questions.</h2></div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What does Sean Lieb specialize in?</h3>
+        <p>Sean is a retail commercial real estate specialist — handling landlord and tenant representation plus investment sales (including shopping centers and single-tenant net-lease assets) across Arizona.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What areas does Sean Lieb serve?</h3>
+        <p>Greater Phoenix, Scottsdale, Tucson, and Arizona's tertiary markets. His office is at 4414 N Civic Center Plaza, Ste 201, Scottsdale, AZ 85251.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does Sean represent both landlords and tenants?</h3>
+        <p>Yes. Sean represents property owners on leasing, valuation and dispositions, and represents national, regional and local retailers on site selection and lease negotiation — as well as buyers and sellers on investment sales.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How experienced is Sean Lieb?</h3>
+        <p>Over a decade in Arizona retail, with more than $100 million in client transaction revenue and over $60 million in value created. He is a Partner at LevRose Commercial Real Estate / TCN Worldwide and is rated 5.0 on Google.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I get a retail property valuation or lease analysis?</h3>
+        <p>Reach out through the <a href="#contact">contact form</a> or call <a href="tel:+16024919295">602.491.9295</a> — Sean will follow up to discuss your property, site search, or acquisition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does Sean Lieb specialize in?", "acceptedAnswer": { "@type": "Answer", "text": "Sean is a retail commercial real estate specialist — handling landlord and tenant representation plus investment sales, including shopping centers and single-tenant net-lease assets, across Arizona." } },
+    { "@type": "Question", "name": "What areas does Sean Lieb serve?", "acceptedAnswer": { "@type": "Answer", "text": "Greater Phoenix, Scottsdale, Tucson, and Arizona's tertiary markets. His office is at 4414 N Civic Center Plaza, Ste 201, Scottsdale, AZ 85251." } },
+    { "@type": "Question", "name": "Does Sean represent both landlords and tenants?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sean represents property owners on leasing, valuation and dispositions, and represents national, regional and local retailers on site selection and lease negotiation, as well as buyers and sellers on investment sales." } },
+    { "@type": "Question", "name": "How experienced is Sean Lieb?", "acceptedAnswer": { "@type": "Answer", "text": "Over a decade in Arizona retail, with more than $100 million in client transaction revenue and over $60 million in value created. He is a Partner at LevRose Commercial Real Estate / TCN Worldwide and is rated 5.0 on Google." } },
+    { "@type": "Question", "name": "How do I get a retail property valuation or lease analysis?", "acceptedAnswer": { "@type": "Answer", "text": "Reach out through the contact form or call 602.491.9295 and Sean will follow up to discuss your property, site search, or acquisition." } }
+  ]
+}
+</script>
+
 <!-- NEWSLETTER -->
 <section class="subscribe">
   <div class="wrap reveal">
@@ -682,7 +733,7 @@
       </div>
       <div class="reveal">
         <div class="ccard">
-          <div class="ph"><img src="assets/sean.png" alt="Sean Lieb"></div>
+          <div class="ph"><img loading="lazy" src="assets/sean.png" alt="Sean Lieb"></div>
           <div class="cb">
             <h3>Sean Lieb</h3>
             <div class="rl">Partner · LevRose CRE</div>
@@ -706,7 +757,7 @@
     </div>
     <div class="foot-broker">
       <span class="lbl">Sean Lieb is a Partner at</span>
-      <span class="pill"><img src="assets/levrose-logo.png" alt="LevRose Commercial Real Estate — TCN Worldwide"></span>
+      <span class="pill"><img loading="lazy" src="assets/levrose-logo.png" alt="LevRose Commercial Real Estate — TCN Worldwide"></span>
     </div>
     <div class="foot-bot">
       <span>© 2026 Sean Lieb · LevRose Commercial Real Estate · Scottsdale, AZ · 602.491.9295</span>
